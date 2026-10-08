@@ -1,0 +1,38 @@
+/*
+ * @Description: 全局样式（Tailwind CSS v4）
+ * @Author: 郑周鑫
+ * @Date: 2026-06-17
+ */
+
+@import "tailwindcss";
+
+/* ---------- 自定义字体变量：由 layout.tsx 中 next/font/google 注入 ---------- */
+/* --font-geist-sans / --font-geist-mono 变量由 React Server Components 设置 */
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+/* ---------- 基础样式 ---------- */
+html,
+body {
+  background-color: #f5f7fa;
+  color: #1f2937;
+}
+
+/* ---------- 自定义滚动条样式 ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
